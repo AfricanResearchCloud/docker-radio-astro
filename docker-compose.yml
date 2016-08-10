@@ -1,0 +1,20 @@
+version: '2'
+services:
+  arc-jupyter:
+    build: 
+      context: ./arc-jupyter
+    image: arc-jupyter
+    entrypoint: /bin/false
+  arc-miriad:
+    build: ./miriad
+    image: arc-miriad
+    depends_on:
+     - arc-jupyter
+    entrypoint: /bin/false
+  arc-casapy:
+    build: ./casapy
+    image: arc-casapy
+    depends_on:
+     - arc-miriad
+    ports:
+     - "8080:9090"
