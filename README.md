@@ -18,5 +18,6 @@ docker-compose up
 ```
 
 After it's done building and starting up, you can connect to http://localhost:8080
-The default password is: *SomeSecretPasswordHere*
+
+The default password is: `SomeSecretPasswordHere`
 
